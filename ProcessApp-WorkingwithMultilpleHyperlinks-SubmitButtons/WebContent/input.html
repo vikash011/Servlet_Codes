@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Input.html</title>
+</head>
+<body>
+	<h1 style="color: red" align="center">HTML to Servlet
+		communication using Multiple Hyperlinks-Submit Buttons</h1>
+	<form action="processurl" mode="post">
+		<table align="center" border="0" style="background-color:cyan">
+			<tr>
+				<td>Value 1::<input type="number" placeholder="first value"
+					name="t1"></td>
+			</tr>
+			<tr>
+				<td>Value 2::<input type="number" placeholder="second value"
+					name="t2"></td>
+			</tr>
+			<tr>
+				<td>
+				 <input type="submit" name="s1" value="ADD">
+				 <input type="submit" name="s1" value="MUL"> 
+				 <input type="submit" name="s1" value="SUB"> 
+				 <input type="submit" name="s1" value="DIV">
+				 </td>
+			</tr>
+			<tr>
+			   <td>
+			   <a href="processurl?s1=link1">System time</a>
+			   <a href="processurl?s1=link2">System properties</a>
+			   </td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
