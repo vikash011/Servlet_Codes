@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>servletconfig_servletcontext</display-name>
+
+	<!-- Applicant Class servlet Configuration -->
+	<servlet>
+		<servlet-name>appli</servlet-name>
+		<servlet-class>com.nit.comps.Applicant</servlet-class>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>applicant@gmail.com</param-value>
+		</init-param>
+	</servlet>
+
+	<!-- Applicant Class servlet mapping -->
+	<servlet-mapping>
+		<servlet-name>appli</servlet-name>
+		<url-pattern>/app</url-pattern>
+	</servlet-mapping>
+
+	<!-- Recruitor Class servlet mapping -->
+	<servlet>
+		<servlet-name>rec</servlet-name>
+		<servlet-class>com.nit.comps.Recruitor</servlet-class>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>recruitor@gmail.com</param-value>
+		</init-param>
+	</servlet>
+
+	<!-- Recruitor Class servlet mapping -->
+	<servlet-mapping>
+		<servlet-name>rec</servlet-name>
+		<url-pattern>/rec</url-pattern>
+	</servlet-mapping>
+
+	<!-- context param name and value -->
+	<context-param>
+		<param-name>web-site</param-name>
+		<param-value>www.xyz.com</param-value>
+	</context-param>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
