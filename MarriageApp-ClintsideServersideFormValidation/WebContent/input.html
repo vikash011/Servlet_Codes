@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome File</title>
+<script  src="js/Validation.js"></script>
+</head>
+<body >
+	<h1 style="color: Blue" align='center'>Clint side- Server Side
+		Form Validation</h1>
+	<marquee><h2><b><ul>Shaadi.Com</ul></h2></b></marquee>
+	
+	<div align="center">
+		<form action="marriageurl" name="frm" mode="post" onsubmit='return validate(this)' >
+			<table border='red'>
+				<tr>
+					<td><label>Name::</label></td>
+					<td><input type='text' placeholder='person name' name='pname'
+						style="background-color: yellow"><span style='color:red' id='errNmae'></span></td>
+				</tr>
+				<tr>
+					<td><label>Age::</label></td>
+					<td><input type='number' placeholder='person age' name='page'
+						style="background-color: Yellow"><span style='color:red' id='errAge'></span></td>
+				</tr>
+				<tr>
+					<td><label>Gender::</label></td>
+					<td><input type="radio" name='gender' value='M'>Male
+					
+					 <input type="radio" name='gender' value='F' checked >Female</td>
+				</tr>
+				<tr>
+					<td><input type='submit' value='check'
+						style='background-color: lightgreen' ></td>
+					<td><input type='reset' value='cancel'
+						style='background-color: lightgreen'></td>
+				</tr>
+
+			</table>
+			<input type='hidden' name='vflag'value='no'>
+
+		</form>
+	</div>
+</body>
+</html>
