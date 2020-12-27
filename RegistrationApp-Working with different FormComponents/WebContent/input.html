@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+</head>
+<body>
+	<h1 align="center" style="color: red">
+		<b><u>-::Registration form::-</u>
+	</h1>
+	<form action="formurl" method="post">
+		<table align="center" bgcolor="cyan">
+			<tr>
+				<td><label>Person Name::</label></td>
+				<td><input type="text" name="pname"></td>
+			</tr>
+			<tr>
+				<td><label>Person Age::</label></td>
+				<td><input type="number" name="page" min="1" max="125"></td>
+			</tr>
+			<tr>
+				<td><label>Person Address::</label></td>
+				<td><textArea name="addrs"></textArea></td>
+			</tr>
+			<tr>
+				<td><label>Gender::</label></td>
+				<td><input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female</td>
+			</tr>
+			<tr>
+				<td><label>Person DOB::</label></td>
+				<td><input type="date" name="pdob"></td>
+			</tr>
+			<tr>
+				<td><label>Favorite Color::</label></td>
+				<td><input type="color" name="favcolor"></td>
+			</tr>
+			<tr>
+				<td><label>Mobile Number::</label></td>
+				<td><input type="tel" name="mobno"></td>
+			</tr>
+			<tr>
+				<td><label>Salary::</label></td>
+				<td><input type="range" name="sal_range"></td>
+			</tr>
+			<tr>
+				<td><label>Current Timing::</label></td>
+				<td><input type="time" name="crr_time"></td>
+			</tr>
+			<tr>
+				<td><label>Email::</label></td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td><label>Favorite URL::</label></td>
+				<td><input type="url" name="fav_url"></td>
+			</tr>
+			<tr>
+				<td><label>Hobbies::</label></td>
+				<td><input type="checkbox" name="hb" value="music">Music
+					<input type="checkbox" name="hb" value="dancing">Dancing <input
+					type="checkbox" name="hb" value="cricket" checked>Cricket <input
+					type="checkbox" name="hb" value="cooking" checked>Cooking <input
+					type="checkbox" name="hb" value="teaching">Teaching <input
+					type="checkbox" name="hb" value="traveling">Traveling</td>
+			</tr>
+			<tr>
+				<td><label>Qualification::</label></td>
+				<td><select name="qualification_list" multiple>
+						<option selected>-select-</option>
+						<option value="b.tech">B.tech</option>
+						<option value="b.a.">B.A.</option>
+						<option value="m.sc">M.sc</option>
+						<option value="b.arch">B.Arch</option>
+						<option value="polytecnic">Polytecnic</option>
+						<option value="b.sc">B.sc</option>
+						<option value="b.com">B.com</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label>Married Status::</label></td>
+				<td><input type="radio" name="m_staus" value="married" checked>Married
+					<input type="radio" name="m_staus" value="Un
+				married">UnMarried</td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="submit" value="submit"></td>
+				<td><input type="reset" name="reset" value="reset"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

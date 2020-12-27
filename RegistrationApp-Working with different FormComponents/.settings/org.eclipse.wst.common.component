@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="RegistrationApp-Working with different FormComponents">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="RegistrationApp-Working_with_different_FormComponents"/>
+        <property name="java-output-path" value="/RegistrationApp-Working with different FormComponents/build/classes"/>
+    </wb-module>
+</project-modules>
