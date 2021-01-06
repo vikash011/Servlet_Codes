@@ -2,6 +2,7 @@ package com.nit.service;
 
 import com.nit.bo.StudentBO;
 import com.nit.dao.IStudentDAO;
+import com.nit.dao.StudentDAOImpl_MySQL;
 import com.nit.dao.StudentDAOImpl_Oracle;
 import com.nit.dto.StudentDTO;
 
@@ -11,7 +12,12 @@ public class StudentMgmtServiceImpl implements IStudentMgmtService {
 
 	public StudentMgmtServiceImpl() throws Exception {
 		System.out.println("StudentMgmtServiceImpl.StudentMgmtServiceImpl()-no param constructor");
-		dao = new StudentDAOImpl_Oracle();
+		
+       //for oracle
+      // dao= new StudentDAOImpl_Oracle();
+		
+		//for Mysql
+		dao = new StudentDAOImpl_MySQL();
 
 	}
 
