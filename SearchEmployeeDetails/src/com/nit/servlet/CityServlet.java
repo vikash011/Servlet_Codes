@@ -1,6 +1,7 @@
 package com.nit.servlet;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class EmpServlet extends HttpServlet {
+public class CityServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	private static String get_city_query = "select * from city where id=?";
@@ -34,41 +35,42 @@ public class EmpServlet extends HttpServlet {
 
 		try {
 			// loading of class (optional)
-//			Class.forName("oracle.jdbc.driver.OracleDriver");
+			//			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			// creating Connection object
-//			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL", "scott", "tiger");
+			//			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL", "scott", "tiger");
 
-			
-//			Class.forName("com.mysql.jdbc.Driver");
-			
+			Class.forName("com.mysql.jdbc.Driver");
+
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/world", "root", "root");
 
 			// creating PreparedStament Object
 			PreparedStatement pstmt = con.prepareStatement(get_city_query);
 
 			// passing Input to parameters query
-			pstmt.setInt(0,id);
+			pstmt.setInt(1, id);
 
 			// Holding Result Set Object data
 			ResultSet rs = pstmt.executeQuery();
 
 			// printing employee details
+
+			
 			while (rs.next()) {
-				pw.println("<h2>" + rs.getString(1) + "</h2>");
-				pw.println("<h2>" + rs.getString(2) + "</h2>");
-				pw.println("<h2>" + rs.getString(3) + "</h2>");
-				pw.println("<h2>" + rs.getString(4) + "</h2>");
-				pw.println("<h2>" + rs.getString(5) + "</h2>");
+				pw.println("<h2> <b>  CountryCode</b>    || " + rs.getString(1)+" </h2>");
+				pw.println("<h2> <b>  Name</b>           || " + rs.getString(2)+" </h2>");
+				pw.println("<h2>   <b> CountryCode</b>   || " + rs.getString(3)+" </h2>");
+				pw.println("<h2>   <b> District   </b>   || " + rs.getString(4)+" </h2>");
+				pw.println("<h2>  <b>  Population</b>    || " + rs.getString(5)+" </h2>");
 				
 			}
 
-		}/**	 catch (
+		} catch (
 
-	ClassNotFoundException cnfe) {
+		ClassNotFoundException cnfe) {
 			cnfe.printStackTrace();
 
-		}**/ catch (SQLException sql) {
+		} catch (SQLException sql) {
 			sql.printStackTrace();
 
 		}
