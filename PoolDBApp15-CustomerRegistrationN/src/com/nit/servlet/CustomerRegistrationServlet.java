@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 public class CustomerRegistrationServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	private static final String INSERT_CUSTOMER_QUERY = "INSERT INTO CUSTOMER VALUES(CNO_SEQ.NEXTVAL,?,?,?)";
+	private static final String INSERT_CUSTOMER_QUERY = "INSERT INTO CUSTOMER (customerName,customerAddr,customerBillAmt) VALUES(?,?,?)";
 
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -27,7 +27,7 @@ public class CustomerRegistrationServlet extends HttpServlet {
 		String cname = req.getParameter("cname");
 		String cadd = req.getParameter("cadd");
 		float billAmt = Float.parseFloat(req.getParameter("billAmt"));
-		try (Connection con = getPooledJdbcConnection("DsJndi")) {
+		try (Connection con = getPooledJdbcConnection("java:/comp/env/DsJndi_MySql")) {
 			if (con != null)
 				try (PreparedStatement ps = con.prepareStatement(INSERT_CUSTOMER_QUERY)) {
 					if (ps != null) {
