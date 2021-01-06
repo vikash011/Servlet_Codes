@@ -5,16 +5,7 @@
 	http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
 	<display-name>ServletToDBConnTest</display-name>
-	<servlet>
-
-		<servlet-name>mysql</servlet-name>
-		<servlet-class>com.nit.servlet.MySqlConnServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>mysql</servlet-name>
-		<url-pattern>/mysql</url-pattern>
-	</servlet-mapping>
-
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
