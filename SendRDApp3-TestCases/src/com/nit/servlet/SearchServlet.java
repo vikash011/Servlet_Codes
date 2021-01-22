@@ -44,16 +44,18 @@ public class SearchServlet extends HttpServlet {
 
 		//		TestCase::1
 		//		Adding one more sendRedirect() method
-		res.sendRedirect("/abc.html");//throws java.lang.IllegalStateException: Cannot call sendRedirect() after the response has been committed
+		//		res.sendRedirect("/abc.html");//throws java.lang.IllegalStateException: Cannot call sendRedirect() after the response has been committed
 
-		
 		
 		//		TestCase::2
-		//		Adding rd.forward();
-		RequestDispatcher rd =req.getRequestDispatcher("/abc.html");
-		rd.forward(req, res);//throws java.lang.IllegalStateException: Cannot forward after response has been committed
+		//		Adding rd.forward(req,res);
+		RequestDispatcher rd = req.getRequestDispatcher("/abc.html");
+		//		rd.forward(req, res);//throws java.lang.IllegalStateException: Cannot forward after response has been committed
 
 		
+		//		TestCase::3
+		//		Adding rd.include(req,res);
+		rd.include(req, res);//output of rd.include(req,res) is Nullified onlu o/p of req.sendRedirect() is shown
 
 	}
 
