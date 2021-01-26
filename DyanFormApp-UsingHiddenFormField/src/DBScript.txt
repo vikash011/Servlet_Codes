@@ -1,0 +1,10 @@
+
+
+CREATE TABLE `practice`.`dyanaform_info` (
+  `pid` INT NOT NULL AUTO_INCREMENT,
+  `pname` VARCHAR(45) NULL,
+  `fname` VARCHAR(45) NULL,
+  `ms` VARCHAR(45) NULL,
+  `info1` VARCHAR(45) NULL,
+  `info2` VARCHAR(45) NULL,
+  PRIMARY KEY (`pid`));
